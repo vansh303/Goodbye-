@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goodbye, My Friend 💔</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .goodbye {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff4747;
+            animation: blink 1.5s infinite alternate;
+        }
+        @keyframes blink {
+            0% { opacity: 1; }
+            100% { opacity: 0.4; }
+        }
+        .message {
+            font-size: 20px;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 20px auto;
+            opacity: 0;
+            font-family: 'Dancing Script', cursive;
+            animation: fadeIn 3s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .hidden-note {
+            display: none;
+            font-size: 18px;
+            margin-top: 20px;
+            color: #ff6363;
+            font-style: italic;
+            font-family: 'Dancing Script', cursive;
+        }
+        .reveal-btn {
+            margin-top: 20px;
+            padding: 12px 18px;
+            background-color: #ff6363;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .reveal-btn:hover {
+            background-color: #d94444;
+            transform: scale(1.05);
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 14px;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Goodbye, My Friend 💔</h1>
+    <p class="goodbye">"Kabhi Alvida Na Kehna..."</p>
+
+    <p class="message">
+        "Dosti ek mehsoos hai, jo doori se kam nahi hoti.  
+        Aaj hum alag ho rahe hain, par yeh yaadein hamesha saath rahengi.  
+        Teri hasi, tere woh ajeeb jokes, woh late-night talks...  
+        Sab kuch yaad aayega.  
+        Shayad phir kabhi milenge, ya shayad nahi...  
+        Par ek baat pakki hai — tu hamesha meri yaadon ka hissa rahega."
+    </p>
+
+    <button class="reveal-btn" onclick="showNote()">📜 Open Final Message</button>
+    <p class="hidden-note" id="note">
+        "Yeh dooriyan sirf fizikal hain, dosti dil me hamesha rahegi.  
+        Chahe jitni door chala ja, ek jagah hamesha reserved rahegi —  
+        **Tere liye, ek dost ke dil me."**"
+    </p>
+
+    <div class="footer">© A Friend Who Will Miss You... 💙</div>
+
+    <script>
+        function showNote() {
+            document.getElementById("note").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
